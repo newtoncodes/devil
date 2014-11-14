@@ -61,7 +61,7 @@ We have added a test application, just to try out Devil. After starting Devil, j
 #### Remote debugging
 
 You can use Devil to debug an application running remotely. You have to install the module both on the "server" machine (the computer that runs your node.js app, that you want to debug)
-and the "client" (usually your computer). Start the server with:
+and the "client" (usually your computer). Start the server with: 
 
 `devil -s -h 0.0.0.0`
 

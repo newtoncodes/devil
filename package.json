@@ -1,7 +1,7 @@
 {
   "name": "devil",
   "description": "Debugger/profiler and runtime with embedded WebKit DevTools client.",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "keywords": [
     "debugger",
     "debug",
@@ -51,6 +51,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./bin/postinstall.js"
   }
 }

@@ -34,7 +34,7 @@ if (_server) {
 
     server.start(function (error) {
         if (error) {
-            console.log("[ERROR] Server failed to start.");
+            console.demonicLog("[ERROR] Server failed to start.");
             console.error(error);
         }
     });
@@ -45,7 +45,7 @@ if (_client) {
 
     var exists = fs.existsSync(exe);
     if (!exists) {
-        console.log("[ERROR] Cannot find node-webkit executable.");
+        console.demonicLog("[ERROR] Cannot find node-webkit executable.");
         process.exit();
     }
 
@@ -54,7 +54,7 @@ if (_client) {
     });
 
     client.on('close', function () {
-        if (_server) console.log("[EXIT] Client closed.");
+        if (_server) console.demonicLog("[EXIT] Client closed.");
         process.exit();
     });
 }

@@ -30,7 +30,7 @@
     "url": "https://github.com/newton-software/devil/issues",
     "email": "dev@newton.codes"
   },
-  "main": "bin/devil.js",
+  "main": "./bin/devil.js",
   "bin": {
     "devil": "./bin/devil.js",
     "node-devil": "./bin/devil.js"
@@ -45,6 +45,9 @@
     "commander": "~2.5.0",
     "freeport": "~1.0.3",
     "nodewebkit": "=0.10.5"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
   },
   "devDependencies": {},
   "scripts": {

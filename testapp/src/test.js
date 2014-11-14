@@ -1,4 +1,4 @@
-var colors = require('colors/safe');
+var colors = require('../lib/colors/safe');
 
 var obj = {
     foo: 1,

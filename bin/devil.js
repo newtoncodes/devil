@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 var program = require('commander'),
     config = require('../package.json'),
     fs = require('fs'),

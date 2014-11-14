@@ -1,0 +1,564 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(../fonts/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(../fonts/PRmiXeptR36kaC0GEAetxh_xHqYgAV9Bl_ZQbYUxnQU.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Open Sans Italic'), local('OpenSans-Italic'), url(../fonts/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+
+/*
+YUI 3.18.1 (build f7e7bcb)
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+
+html {
+    color: #000000;
+    background: #ffffff
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal
+}
+
+ol, ul {
+    list-style: none
+}
+
+caption, th {
+    text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+q:before, q:after {
+    content: ''
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal
+}
+
+sup {
+    vertical-align: text-top
+}
+
+sub {
+    vertical-align: text-bottom
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    *font-size: 100%
+}
+
+legend {
+    color: #000000
+}
+
+#yui3-css-stamp.cssreset {
+    display: none
+}
+
+/**
+END OF RESET
+**/
+
+html, body {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+iframe {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+body {
+    color: #333;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    background: white;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.clear {
+    clear: both;
+}
+
+.header {
+    background: white;
+    height: 51px;
+    box-sizing: border-box;
+    padding: 11px 10px 10px 10px;
+    border-bottom: 1px solid rgb(163, 163, 163);
+}
+
+.header .logo {
+    margin: -9px 10px -5px -8px;
+    float: left;
+}
+
+.header .logo img {
+    height: 46px;
+}
+
+* {
+    outline: none !important;
+}
+
+/*** custom checkboxes ***/
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label {
+    background: white;
+}
+
+input[type=checkbox] + label:before {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+
+    display: inline-block;
+}
+
+input[type=checkbox] + label {
+    height: 28px;
+    box-sizing: border-box;
+}
+
+input[type=checkbox] + label:before {
+    width: 24px;
+    font-size: 24px;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 2px;
+
+    content: "\f096";
+}
+
+/* unchecked icon */
+input[type=checkbox] + label:before {
+
+}
+
+/* space between checkbox and label */
+input[type=checkbox]:checked + label:before {
+    content: "\f046";
+}
+
+input[type=checkbox]:checked + label:before {
+
+}
+
+input[type=checkbox] + label.break:before {
+    content: "\e082";
+    color: #333333;
+    font-size: 22px !important;
+    padding-top: 3px;
+}
+
+input[type=checkbox]:checked + label.break:before {
+    content: "\e082";
+    color: #b81b1b;
+}
+
+input[type=checkbox] + label.mute:before {
+    content: "\e036";
+    color: #333333;
+    font-size: 27px !important;
+    padding-top: 2px;
+}
+
+input[type=checkbox]:checked + label.mute:before {
+    content: "\e036";
+    color: #b81b1b;
+}
+
+input[type=checkbox] + label.save-files:before {
+    content: "\e173";
+    color: #333333;
+    font-size: 22px !important;
+    padding-top: 3px;
+}
+
+input[type=checkbox]:checked + label.save-files:before {
+    content: "\e173";
+    color: #b81b1b;
+}
+
+.header a {
+    background: #ffffff;
+    text-decoration: none;
+    color: #555555;
+    font-size: 24px;
+    vertical-align: top;
+    margin-right: 5px;
+    display: inline-block;
+    float: left;
+    padding-top: 2px;
+    outline: none !important;
+
+    height: 28px;
+    box-sizing: border-box;
+}
+
+.header a:hover {
+    color: #111111;
+}
+
+.header {
+    position: relative;
+}
+
+.header .loader {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #111111;
+    font-size: 20px;
+    text-align: left;
+    vertical-align: top;
+    padding-left: 5px;
+    display: block;
+    z-index: 200;
+}
+
+.header .loader img {
+    margin-top: 12px;
+    display: none;
+}
+
+.header .loader span {
+    vertical-align: top;
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 17px;
+    color: #333333;
+    padding-left: 5px;
+}
+
+#busy {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    color: #111111;
+    font-size: 20px;
+    text-align: left;
+    vertical-align: top;
+    padding-left: 5px;
+    z-index: 300;
+    display: none;
+}
+
+.header input[type=checkbox] + label:before {
+    color: #555555;
+    font-size: 24px;
+    background: #ffffff;
+    width: auto;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.header input[type=checkbox] + label:hover:before {
+    color: #111111;
+}
+
+.header input[type=checkbox]:checked + label:hover:before {
+    color: #b81b1b;
+}
+
+.header label {
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.header input[type=text], .header input[type=password] {
+    font-size: 14px;
+    font-weight: normal;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    vertical-align: middle !important;
+    height: 28px;
+    margin-top: 1px;
+    border-radius: 2px;
+    border: 1px solid #dddddd;
+    background: #f1f1f1;
+    outline: none;
+    width: 80px;
+
+    font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.header .glyphicon.active {
+    color: #b81b1b;
+}
+
+.header label.input {
+    color: #444;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.header label.file {
+    position: relative;
+}
+
+.header label.file input {
+    padding-right: 33px;
+}
+
+.header label.file a {
+    position: absolute;
+    color: #666666;
+    right: 4px;
+    top: 7px;
+    font-size: 15px;
+    background: transparent;
+    vertical-align: middle;
+}
+
+.header label.file a:hover {
+    color: #333333;
+}
+
+.header label {
+    vertical-align: top;
+    float: left;
+    cursor: pointer;
+}
+
+.header .glyphicon-eye-close {
+    font-size: 22px !important;
+    padding-top: 2px;
+    margin-right: 7px;
+}
+
+#play_btn {
+    padding-top: 0px;
+}
+
+#stop_btn, #pause_btn, #resume_btn {
+
+}
+
+
+
+.devtools {
+    margin: 0px;
+    padding: 0px;
+}
+
+.devtools iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: white;
+}
+
+#hidden-shit {
+    top: -200px;
+    left: -200px;
+    position: fixed;
+    opacity: 0;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+}
+
+#hidden-modal input[type=text] {
+    font-size: 14px;
+    font-weight: normal;
+    box-sizing: border-box;
+    padding: 5px 20px;
+    height: 28px;
+    border-radius: 2px;
+    border: 1px solid #dddddd;
+    background: #f1f1f1;
+    outline: none;
+    width: 240px;
+    vertical-align: top;
+
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+#hidden-modal .inputs > div > a {
+    color: #333333;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    padding-top: 5px;
+    box-sizing: border-box;
+    vertical-align: top;
+    border: 1px solid #dddddd;
+    border-left: none;
+    background: #f1f1f1;
+    border-radius: 2px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#hidden-modal .inputs > div > a:hover {
+    color: #ffffff;
+    background: #333333;
+    border-color: black;
+}
+
+#hidden-modal .inputs > div span:first-child {
+    color: #111111;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#hidden-modal .inputs > div span:nth-child(2) {
+    color: #111111;
+    position: absolute;
+    top: 4px;
+    right: 38px;
+    font-size: 16px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+#hidden-modal .inputs > div {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#hidden-modal input.error {
+    color: #b81b1b;
+}
+
+#overlay {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    background: rgba(0, 0, 0, 0.9);
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    box-sizing: border-box;
+    padding: 100px;
+    color: white;
+    z-index: 1000;
+}
+
+#overlay img {
+    height: 80px;
+}
+
+#overlay .msg {
+    margin-top: 40px;
+}
+
+#overlay2 {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-size: 28px;
+    font-weight: 300;
+    box-sizing: border-box;
+    padding: 100px;
+    padding-top: 220px;
+    color: #111111;
+    z-index: 100;
+    opacity: 0;
+}
+
+
+
+

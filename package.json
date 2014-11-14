@@ -1,0 +1,59 @@
+{
+    "name": "devil",
+    "description": "Debugger/profiler and runtime with embedded WebKit DevTools client.",
+    "version": "0.0.1",
+
+    "keywords": [
+        "debugger",
+        "debug",
+        "inspector",
+        "inspect",
+        "profiler",
+        "cpu profiler",
+        "heap profiler",
+        "devtools",
+        "node-webkit",
+        "development",
+        "devil"
+    ],
+
+    "author": {
+        "name": "Newton Software",
+        "email": "dev@newton.codes",
+        "url": "https://newton.codes/"
+    },
+
+    "contributors": [
+        "Hristiyan Nikolov <hristiyan@newton.codes>",
+        "Dimitar Andreev <d.andreev@newton.codes>"
+    ],
+
+    "license": "MIT",
+
+    "homepage": "https://github.com/newton-software/devil",
+    "repository": {
+        "url": "https://github.com/newton-software/devil.git",
+        "type": "git"
+    },
+    "bugs": {
+        "url": "https://github.com/newton-software/devil/issues",
+        "email": "dev@newton.codes"
+    },
+
+    "main": "bin/devil.js",
+    "bin": {
+        "devil": "bin/devil.js",
+        "node-devil": "bin/devil.js"
+    },
+
+    "dependencies": {
+        "heapdump": "~0.3.0",
+        "v8-profiler": "~5.0.0",
+        "ws": "~0.4.32",
+        "async": "~0.9.0",
+        "glob": "~4.0.6",
+        "commander": "~2.5.0",
+        "freeport": "~1.0.3",
+        "nodewebkit": "=0.10.5"
+    }
+}

@@ -1,0 +1,9 @@
+[ {
+   "description": "",
+   "devtoolsFrontendUrl": "/devtools/devtools.html?ws=127.0.0.1:55712/devtools/page/876B6138-630E-1F75-361E-23C500713094",
+   "id": "876B6138-630E-1F75-361E-23C500713094",
+   "title": "Node debugger",
+   "type": "page",
+   "url": "file:///home/newton/workspace/nodebug/src/index.html",
+   "webSocketDebuggerUrl": "ws://127.0.0.1:55712/devtools/page/876B6138-630E-1F75-361E-23C500713094"
+} ]

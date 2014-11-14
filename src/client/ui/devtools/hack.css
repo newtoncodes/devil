@@ -1,0 +1,202 @@
+html, body {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.node-search-status-bar-item.status-bar-item {
+    display: none !important;
+}
+
+#tab-network {
+    display: none !important;
+}
+
+#tab-elements {
+    display: none !important;
+}
+
+#tab-resources {
+    display: none !important;
+}
+
+#tab-audits {
+    display: none !important;
+}
+
+#tab-sources {
+    margin-left: 10px !important;
+}
+
+.panel.sources .tabbed-pane.navigator-tabbed-pane .tabbed-pane-header-contents .tabbed-pane-header-tabs {
+    display: none !important;
+}
+
+.panel.sources .tabbed-pane.navigator-tabbed-pane .tabbed-pane-header-contents {
+    padding-top: 4px;
+}
+
+.panel.sources .tabbed-pane.navigator-tabbed-pane .tabbed-pane-header-contents:after {
+    font-size: 13px;
+    color: #222;
+    font-weight: 500;
+    padding-left: 9px;
+    content: "Code base";
+}
+
+/*
+
+.panel.sources
+.split-view-contents.split-view-sidebar.vbox.split-view-contents-second
+.sidebar-pane-stack.flex-auto.visible > .sidebar-pane-title:nth-of-type(7),
+.panel.sources
+.split-view-contents.split-view-sidebar.vbox.split-view-contents-second
+.sidebar-pane-stack.flex-auto.visible > .sidebar-pane-title:nth-of-type(8),
+.panel.sources
+.split-view-contents.split-view-sidebar.vbox.split-view-contents-second
+.sidebar-pane-stack.flex-auto.visible > .sidebar-pane-title:nth-of-type(9) {
+    display: none;
+}
+*/
+
+[title="DOM Breakpoints"],
+[title="XHR Breakpoints"],
+[title="Event Listener Breakpoints"] {
+
+    display: none !important;
+}
+
+.panel.timeline {
+
+}
+
+.panel.timeline .timeline-filters-header {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-left: 290px;
+}
+
+.panel.timeline .timeline-filters-header .search-replace.toolbar-replace-control {
+    border-radius: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+.panel.timeline .panel-status-bar {
+    border-bottom: 1px solid #c1c1c1;
+}
+
+.panel.timeline .timeline-filters-header .hbox {
+    width: 200px;
+}
+
+.panel.timeline .timeline-filters-header .hbox .filter-checkbox-filter {
+    display: none !important;
+}
+
+.panel.timeline .filters-toggle.status-bar-item {
+    display: none !important;
+}
+
+
+
+
+
+.profile-launcher-view-content > div > form > label:last-child {
+    display: none !important;
+}
+
+.sidebar-tree-item.profile-sidebar-tree-item .save-link {
+    display: none !important;
+}
+
+
+
+
+
+.panel.console .console-status-bar > * {
+    display: none !important;
+}
+
+.panel.console .console-status-bar > :first-child {
+    display: inline-block !important;
+    position: absolute;
+    right: 0px;
+}
+
+.panel.console .console-filters-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.panel.console .console-filters-header .search-replace.toolbar-replace-control {
+    border-radius: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+.panel.console .console-filters-header .hbox {
+    width: 457px;
+}
+
+#tab-emulation, #tab-rendering {
+    display: none !important;
+}
+
+
+
+
+.split-view-contents.split-view-sidebar.split-view-contents-second .tabbed-pane-header.ns-resizer-widget {
+    flex: 0 0 5px !important;
+}
+
+.split-view-contents.split-view-sidebar.split-view-contents-second .tabbed-pane-header-tabs {
+    display: none !important;
+}
+
+.split-view-contents.split-view-sidebar.split-view-contents-second .tabbed-pane-content .console-view .console-filters-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.split-view-contents.split-view-sidebar.split-view-contents-second .tabbed-pane-content .console-view .console-status-bar > * {
+    display: none !important;
+}
+
+.split-view-contents.split-view-sidebar.split-view-contents-second .tabbed-pane-content .console-view .console-status-bar > :first-child {
+    display: inline-block !important;
+    position: absolute;
+    right: 0px;
+}
+
+#console-messages {
+    border-top: 1px solid #cccccc;
+}
+
+.console-filters-header li {
+    border-radius: 0px !important;
+    padding: 4px 6px 3px 6px !important;
+}
+
+.console-filters-header li.selected {
+    background: rgba(0, 0, 0, 0.5) !important;
+    color: #ffffff !important;
+}
+
+.console-filters-header li:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #111111;
+    text-shadow: none !important;
+}
+
+.console-filters-header .search-replace.toolbar-replace-control {
+    border-radius: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+.help-window-main {
+    border-radius: 0px !important;
+}

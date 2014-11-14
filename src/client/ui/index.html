@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Devil</title>
+
+        <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery.qtip.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap-flat.css" rel="stylesheet" type="text/css"/>
+        <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/jquery.qtip.js"></script>
+    </head>
+    <body>
+        <input style="display:none;" id="file_dialog" type="file" />
+        <div id="hidden-shit"></div>
+        <div id="overlay">
+            <div><img src="img/loader-big.gif"></div>
+            <div class="msg"></div>
+        </div>
+        <div id="overlay2">Run something.</div>
+
+        <div class="modal" id="hidden-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" >Hidden files (regex)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="inputs"></div>
+                        <div class="add">
+                            <a href="#" class="btn btn-info" onclick="ui.addOne(); return false;">Add rule</a>
+                            <div style="display: inline-block; margin-top: 9px; vertical-align: top; margin-left: 5px;">Please use regular expressions only, without the // and flags.</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" onclick="ui.saveHiddenFiles();">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header">
+            <div id="loader" class="loader">
+                <img src="img/loader.gif">
+                <span class="text">Connecting...</span>
+            </div>
+
+            <div class="logo">
+                <img src="icons/64.png">
+            </div>
+
+            <label title="Application/script path" class="file input">
+                <input id="file_input" value="" type="text" placeholder="Path" onkeyup="ui.resizeInputs(); ui.setOption('file', $(this).val());" onchange="ui.resizeInputs(); ui.setOption('file', $(this).val());">
+                <a href="#" onclick="return ui.browseFiles();" class="glyphicon glyphicon-folder-open"></a>
+            </label>
+            <label title="Arguments of the debugged process" class="input" style="margin-right: 10px;">
+                <input id="args_input" type="text" placeholder="Args" onkeyup="ui.resizeInputs(); ui.setOption('args', $(this).val());" onchange="ui.resizeInputs(); ui.setOption('args', $(this).val());">
+            </label>
+
+            <a href="#" onclick="ui.openModal(); return false;" title="Hidden files" class="glyphicon glyphicon-eye-close"></a>
+
+            <input id="input_save_files" type="checkbox" onchange="ui.setOption('saveFiles', $(this).is(':checked'), this);" /><label for="input_save_files" title="Save live edit" class="save-files"></label>
+            <input id="input_break" type="checkbox" onchange="ui.setOption('break', $(this).is(':checked'), this);"/><label for="input_break" title="Break on first line" class="break"></label>
+            <input id="input_mute" type="checkbox" onchange="ui.setOption('mute', $(this).is(':checked'), this);"/><label for="input_mute" title="Mute stdout and stderr" class="mute"></label>
+
+            <a href="#" id="stop_btn" title="Stop" class="glyphicon glyphicon-stop stop" style="display: none; float: right;" onclick="ui.stop(); return false;"></a>
+            <a href="#" id="pause_btn" title="Pause" class="glyphicon glyphicon-pause pause" style="display: none; float: right; margin-left: 10px;" onclick="ui.pause(); return false;"></a>
+            <a href="#" id="resume_btn" title="Resume" class="glyphicon glyphicon-pause resume active" style="display: none; float: right; margin-left: 10px;" onclick="ui.resume(); return false;"></a>
+            <a href="#" id="run_btn" title="Run" class="glyphicon glyphicon-play play" style="float: right; margin-left: 10px;" onclick="ui.run(); return false;"></a>
+
+            <div style="float: right; width: 1px; height: 18px; background: rgba(0, 0, 0, 0.2); margin-top: 6px;"></div>
+
+            <div id="busy"></div>
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="devtools" id="devtools">
+            <iframe src="about:blank" nwfaketop="true" nwdisable="true"></iframe>
+        </div>
+
+        <script type="text/javascript">
+            // Create the ui
+            var Ui = require('../Ui');
+            var ui = new Ui(window);
+
+            // No exceptions! This is a simple client ffs.
+            if (process._events.uncaughtException.length > 0) {
+                process._events.uncaughtException.splice(0, 1);
+            }
+            process.on('uncaughtException', function (e) {
+                console.group('Node uncaughtException');
+                if (!!e.message) {
+                    console.log(e.message);
+                }
+                if (!!e.stack) {
+                    console.log(e.stack);
+                }
+                console.log(e);
+                console.groupEnd();
+            });
+
+            if (
+                    process._events.uncaughtException.length > 1 && !!process._events.uncaughtException[0].toString().match(/native code/)
+            ) {
+                process._events.uncaughtException.splice(0, 1);
+            }
+
+            // DevTools
+            // require('nw.gui').Window.get().showDevTools();
+        </script>
+    </body>
+</html>

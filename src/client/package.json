@@ -1,0 +1,25 @@
+{
+    "author": {
+        "name": "Newton software",
+        "email": "dev@newton.codes",
+        "url": "https://newton.codes/"
+    },
+    "main": "ui/index.html",
+    "name": "devil-client",
+    "description": "The client for Devil.",
+    "version": "0.0.1",
+    "window": {
+        "title": "Devil",
+        "icon": "ui/icons/32.png",
+        "show": true,
+        "toolbar": false,
+        "frame": true,
+        "width": 1000,
+        "height": 600,
+        "min_width": 1000,
+        "min_height": 400
+    },
+    "webkit": {
+        "plugin": false
+    }
+}

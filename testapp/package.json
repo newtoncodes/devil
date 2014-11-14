@@ -1,0 +1,19 @@
+{
+    "author": {
+        "name": "Newton Software",
+        "email": "dev@newton.codes",
+        "url": "https://newton.codes/"
+    },
+    "main": "bin/start.js",
+    "name": "testapp",
+    "description": "Test application for Devil debugger",
+    "version": "0.0.1",
+    "dependencies": {
+        "ws": "*",
+        "async": "*",
+        "glob": "*",
+        "colors": "*",
+        "commander": ">=2.5.0",
+        "freeport": ">=1.0.3"
+    }
+}

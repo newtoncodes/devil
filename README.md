@@ -37,7 +37,7 @@ to CSS codes in the DevTools console, you can see the result in the screenshots 
 console and use it runtime. All that is needed is the application to be running still, of course.
 
 ## Installation
-`npm install devil`
+`npm install -g devil`
 
 * You have to reinstall the program if you change the node.js version, because the plugins need recompilation.
 
@@ -61,7 +61,7 @@ We have added a test application, just to try out Devil. After starting Devil, j
 #### Remote debugging
 
 You can use Devil to debug an application running remotely. You have to install the module both on the "server" machine (the computer that runs your node.js app, that you want to debug)
-and the "client" (usually your computer). Start the server with: 
+and the "client" (usually your computer). Start the server with:
 
 `devil -s -h 0.0.0.0`
 

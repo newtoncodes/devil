@@ -13,7 +13,7 @@ for the great ideas for the timeline implementation!
 npm install -g devil
 ```
 
-note that if you're on Linux, you have to use the sudo command:
+Note that if you're on Linux, you have to use the sudo command:
 
 ```sh
 sudo npm install -g devil
@@ -29,7 +29,7 @@ If you get an error like:
 **Ubuntu:**
 
 ```sh
-sudo apt-get install libudev0`
+sudo apt-get install libudev0
 ```
 
 **Fedora:**
@@ -50,7 +50,7 @@ Simply use the command:
 devil
 ```
 
-or
+Or, in case you have a local install:
 
 ```sh
 node /path/to/devil

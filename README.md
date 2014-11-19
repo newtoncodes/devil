@@ -4,7 +4,85 @@
 The project is based on [node-inspector](https://github.com/node-inspector/node-inspector) and [node-webkit-agent](https://github.com/c4milo/node-webkit-agent)
 (big thanks to the authors) but it's an entirely separate project. We have used a lot of node-inspector's code, refactored most of it, changed and added a lot. Thanks to [c4milo](https://github.com/c4milo)
 for the great ideas for the timeline implementation!
+* Check out all the features explained [here](https://github.com/newton-software/devil/blob/master/README.md#features).
 * Check out the screenshots below or [here](http://imgur.com/a/tN6MU).
+
+## Installation
+
+```sh
+npm install -g devil
+```
+
+note that if you're on Linux, you have to use the sudo command:
+
+```sh
+sudo npm install -g devil
+```
+
+* You can install the module as a local package, but then you will have to access it from the local node_modules directory with node, rather than using the normal command.
+* You have to reinstall the program if you change the node.js version, because the plugins need recompilation.
+
+If you get an error like:
+
+**/usr/lib/node_modules/devil/node_modules/nodewebkit/nodewebkit/nw: error while loading shared libraries: libudev.so.0: cannot open shared object file: No such file or directory**
+
+**Ubuntu:**
+
+```sh
+sudo apt-get install libudev0`
+```
+
+**Fedora:**
+
+```sh
+sudo yum install libgudev1
+sudo ln -s /usr/lib64/libudev.so.1 /usr/lib64/libudev.so.0
+```
+
+[More info on this](http://askubuntu.com/questions/288821/how-do-i-resolve-a-cannot-open-shared-object-file-libudev-so-0-error#289087)
+
+
+## Usage
+
+Simply use the command:
+
+```sh
+devil
+```
+
+or
+
+```sh
+node /path/to/devil
+```
+
+* **You don't have to start your application separately. Just start Devil and run your script from it.**
+* **After Devil starts, you have to select a file from your computer (or the server in case of remote debugging) and hit the run button.**
+
+It will start a server and a client and you can start doing your job. If you want more advanced usage, try **--help** for more info. The port and host of the server are configurable.
+You can also start the program as a server or client only if you want remote debugging.
+
+#### Just try it out
+
+We have added a test application, just to try out Devil. After starting Devil, just enter **../../testapp** or **/path/to/devil/testapp** and run it. It has some basic functionality for testing.
+
+#### Remote debugging
+
+You can use Devil to debug an application running remotely. You have to install the module both on the "server" machine (the computer that runs your node.js app, that you want to debug)
+and the "client" (usually your computer). Start the server with:
+
+```sh
+devil -s -h 0.0.0.0
+```
+
+This will start Devil without the client, listening on any IP. Then, run the client from your computer with:
+
+```sh
+devil -c -h [IP]
+```
+
+Where [IP] is the server's IP.
+
 
 ## Features
 
@@ -35,41 +113,6 @@ are initialized before the timeline started. Also has a few other small improvem
 The console is fully supported. As long as we have tested, all logging functions display the right output. Also you can use colors. If your node.js application uses colors as stdout, we translate that colors
 to CSS codes in the DevTools console, you can see the result in the screenshots below. There is full runtime support and access to the global object and require. You can require any application module from the
 console and use it runtime. All that is needed is the application to be running still, of course.
-
-## Installation
-`npm install -g devil`
-
-* You have to reinstall the program if you change the node.js version, because the plugins need recompilation.
-
-## Usage
-
-Simply use the command:
-
-`devil`
-
-or
-
-`node /path/to/devil`
-
-It will start a server and a client and you can start doing your job. If you want more advanced usage, try **--help** for more info. The port and host of the server are configurable.
-You can also start the program as a server or client only if you want remote debugging.
-
-#### Just try it out
-
-We have added a test application, just to try out Devil. After starting Devil, just enter **../../testapp** or **/path/to/devil/testapp** and run it. It has some basic functionality for testing.
-
-#### Remote debugging
-
-You can use Devil to debug an application running remotely. You have to install the module both on the "server" machine (the computer that runs your node.js app, that you want to debug)
-and the "client" (usually your computer). Start the server with:
-
-`devil -s -h 0.0.0.0`
-
-This will start Devil without the client, listening on any IP. Then, run the client from your computer with:
-
-`devil -c -h [IP]`
-
-Where [IP] is the server's IP.
 
 
 ## Screenshots

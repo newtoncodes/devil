@@ -30,7 +30,15 @@ function chmodrSync(p, mode) {
     return fs.chmodSync(p, dirMode(mode))
 }
 
-chmodrSync(__dirname + '/../node_modules/nodewebkit/nodewebkit', 0755);
+try {
+    chmodrSync(__dirname + '/../node_modules/nodewebkit/nodewebkit', 0755);
+} catch (e) {
+    // Do nothing.
+}
+
+console.log("Fixed node-webkit permissions.");
+console.log("If you are having trouble launching the client, please check the permissions of:");
+console.log("    " + __dirname + '/../node_modules/nodewebkit/nodewebkit');
 
 /*
 :end */

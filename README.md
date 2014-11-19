@@ -4,7 +4,7 @@
 The project is based on [node-inspector](https://github.com/node-inspector/node-inspector) and [node-webkit-agent](https://github.com/c4milo/node-webkit-agent)
 (big thanks to the authors) but it's an entirely separate project. We have used a lot of node-inspector's code, refactored most of it, changed and added a lot. Thanks to [c4milo](https://github.com/c4milo)
 for the great ideas for the timeline implementation!
-* Check out all the features explained [here](https://github.com/newton-software/devil/blob/master/README.md#features).
+* Check out all the features explained [here](https://github.com/newton-software/devil#features).
 * Check out the screenshots below or [here](http://imgur.com/a/tN6MU).
 
 ## Installation
@@ -19,7 +19,7 @@ npm install -g devil
 npm install -g devil-windows
 ```
 
-* Usage of the Windows pre-compiled version is absolutely the same (the command is `devil` and **not** `devil-windows`). [Link to npm](https://www.npmjs.org/packages/devil-windows).
+* Usage of the Windows pre-compiled version is absolutely the same (the command is `devil` and **not** `devil-windows`). [Link to npm](https://www.npmjs.org/package/devil-windows).
 
 **On Linux**, not using NVM, you have to use the sudo command:
 

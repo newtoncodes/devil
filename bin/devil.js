@@ -50,12 +50,18 @@ if (_client) {
         process.exit();
     }
 
+    var lastErr = null;
+    
     var client = spawn(exe, [__dirname + '/../src/client', program.host, program.port], {
-        stdio: ['ignore', 'ignore', 'ignore']
+        stdio: ['ignore', 'ignore', null]
+    });
+
+    client.stderr.on('data', function(data) {
+        lastErr = data.toString('utf8');
     });
 
     client.on('close', function () {
-        if (_server) console.demonicLog("[EXIT] Client closed.");
+        if (_server) console.demonicLog("[EXIT] Client closed.\n[INFO] Last error message from client:\n" + lastErr + "\n");
         process.exit();
     });
 }

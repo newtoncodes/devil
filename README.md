@@ -13,7 +13,7 @@ for the great ideas for the timeline implementation!
 npm install -g devil
 ```
 
-**On Windows**, you need to have Visual Studio 2010 **Pro** to compile all packages. If you don't have this exact version ov VS, you can try the following:
+**On Windows**, you need to have Visual Studio 2010 **Pro** to compile all packages. If you don't have this exact version of VS, you can try the following:
 
 ```sh
 npm install -g devil-windows
